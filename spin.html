@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spin the Globe | Spin &amp; Seek</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;family=Fredoka:wght@500;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html">Spin &amp; <span class="seek">Seek</span> 🌍</a>
+    <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Open or close the menu">☰</button>
+    <nav id="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="spin.html" class="current" aria-current="page">Spin the Globe</a></li>
+        <li><a href="gems.html">Hidden Gems</a></li>
+        <li><a href="bucket.html">Bucket List</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="spinner" class="centre">
+      <p class="script">Discover. Explore. Repeat.</p>
+      <h1>Where will you go next?</h1>
+      <img id="spin-globe" class="spin-globe" src="images/globe.svg" alt="A teal globe that spins when you press the button">
+      <button id="spin-button" class="btn" type="button" onclick="spinGlobe()">🌐 Spin the globe →</button>
+
+      <h2>Your destination is...</h2>
+      <div id="result" aria-live="polite">
+        <p>Press the button to find your next destination.</p>
+      </div>
+      <p id="save-message" aria-live="polite"></p>
+    </section>
+
+    <section id="how-it-works"><p class="todo">The spinner allows users to discover a random travel destination by clicking the spin button.It spins the globe and randomly selects a place from different parts of the world.Once it stops, users can explore the selected destination and learn more about its attractions and hidden gems.It's a fun and exciting way to find your next adventure!</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <p class="footer-logo">Spin &amp; <span class="seek">Seek</span> 🌍</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="spin.html">Spin the Globe</a></li>
+        <li><a href="gems.html">Hidden Gems</a></li>
+        <li><a href="bucket.html">Bucket List</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <p class="footer-tagline">Spin the world. Discover the unexpected. 🧡</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

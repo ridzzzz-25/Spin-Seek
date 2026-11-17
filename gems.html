@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hidden Gems | Spin &amp; Seek</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;family=Fredoka:wght@500;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html">Spin &amp; <span class="seek">Seek</span> 🌍</a>
+    <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Open or close the menu">☰</button>
+    <nav id="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="spin.html">Spin the Globe</a></li>
+        <li><a href="gems.html" class="current" aria-current="page">Hidden Gems</a></li>
+        <li><a href="bucket.html">Bucket List</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="gems">
+      <h1>📍 Discover Hidden Gems</h1>
+      <p>Lesser-known places. Unforgettable experiences.</p>
+
+      <label for="search" class="search-label">Search for a place</label>
+      <input type="search" id="search" placeholder="Type a place name..." onkeyup="applyFilters()">
+
+      <div class="filters">
+        <button type="button" class="btn btn-small active" onclick="setCategory('all', this)">All</button>
+        <button type="button" class="btn btn-small" onclick="setCategory('beach', this)">Beach</button>
+        <button type="button" class="btn btn-small" onclick="setCategory('nature', this)">Nature</button>
+        <button type="button" class="btn btn-small" onclick="setCategory('culture', this)">Culture</button>
+      </div>
+
+      <div class="cards">
+        <article class="card gem-card" data-name="Santorini, Greece" data-type="beach" onmouseover="showCaption('Santorini, Greece')" onmouseout="hideCaption()">
+          <img src="images/village.svg" alt="Illustration of white houses with coral roofs beside the sea">
+          <div class="card-body">
+            <h3>📍 Santorini, Greece</h3>
+            <p>Stunning views, charming villages and crystal-clear waters.</p>
+            <a class="btn btn-small" href="bucket.html">Explore →</a>
+          </div>
+        </article>
+
+        <article class="card gem-card" data-name="Ha Long Bay, Vietnam" data-type="nature" onmouseover="showCaption('Ha Long Bay, Vietnam')" onmouseout="hideCaption()">
+          <img src="images/sea.svg" alt="Illustration of rocky islands rising from a teal sea">
+          <div class="card-body">
+            <h3>📍 Ha Long Bay, Vietnam</h3>
+            <p>Hidden caves, emerald waters and breathtaking landscapes.</p>
+            <a class="btn btn-small" href="bucket.html">Explore →</a>
+          </div>
+        </article>
+
+        <article class="card gem-card" data-name="Bali, Indonesia" data-type="nature" onmouseover="showCaption('Bali, Indonesia')" onmouseout="hideCaption()">
+          <img src="images/nature.svg" alt="Illustration of green hills under a coral sun">
+          <div class="card-body">
+            <h3>📍 Bali, Indonesia</h3>
+            <p>Peaceful beaches, lush nature and rich culture.</p>
+            <a class="btn btn-small" href="bucket.html">Explore →</a>
+          </div>
+        </article>
+
+        <article class="card gem-card" data-name="Zanzibar, Tanzania" data-type="beach" onmouseover="showCaption('Zanzibar, Tanzania')" onmouseout="hideCaption()">
+          <img src="images/sea.svg" alt="Illustration of rocky islands rising from a teal sea">
+          <div class="card-body">
+            <h3>📍 Zanzibar, Tanzania</h3>
+            <p>Beautiful beaches, turquoise waters and rich island culture.</p>
+            <a class="btn btn-small" href="bucket.html">Explore →</a>
+          </div>
+        </article>
+
+        <article class="card gem-card" data-name="Chefchaouen, Morocco" data-type="culture" onmouseover="showCaption('Chefchaouen, Morocco')" onmouseout="hideCaption()">
+          <img src="images/village.svg" alt="Illustration of white houses with coral roofs beside the sea">
+          <div class="card-body">
+            <h3>📍 Chefchaouen, Morocco</h3>
+            <p>Colorful blue streets, beautiful moutain views and charming Moroccan culture.</p>
+            <a class="btn btn-small" href="bucket.html">Explore →</a>
+          </div>
+        </article>
+
+        <article class="card gem-card" data-name="Plitvice Lakes, Croatia" data-type="nature" onmouseover="showCaption('Plitvice Lakes, Croatia')" onmouseout="hideCaption()">
+          <img src="images/nature.svg" alt="Illustration of green hills under a coral sun">
+          <div class="card-body">
+            <h3>📍 Plitvice Lakes, Croatia</h3>
+            <p>Beautiful turquoise lakes, stunning waterfalls and lush green forests.</p>
+            <a class="btn btn-small" href="bucket.html">Explore →</a>
+          </div>
+        </article>
+      </div>
+
+      <p id="no-results">No places match your search.</p>
+      <p id="caption-box">Hover over a card to see the place name.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <p class="footer-logo">Spin &amp; <span class="seek">Seek</span> 🌍</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="spin.html">Spin the Globe</a></li>
+        <li><a href="gems.html">Hidden Gems</a></li>
+        <li><a href="bucket.html">Bucket List</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <p class="footer-tagline">Spin the world. Discover the unexpected. 🧡</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

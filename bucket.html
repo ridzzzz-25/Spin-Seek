@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bucket List | Spin &amp; Seek</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;family=Fredoka:wght@500;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="renderList()">
+  <header>
+    <a class="logo" href="index.html">Spin &amp; <span class="seek">Seek</span> 🌍</a>
+    <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Open or close the menu">☰</button>
+    <nav id="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="spin.html">Spin the Globe</a></li>
+        <li><a href="gems.html">Hidden Gems</a></li>
+        <li><a href="bucket.html" class="current" aria-current="page">Bucket List</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="my-list">
+      <h1>🎒 My Bucket List</h1>
+      <p class="todo">Save the places you want to visit by filling in the form below, and your bucket list will appear here.</p>
+      <ul id="list-items"></ul>
+    </section>
+
+    <section id="add-place">
+      <h2>Add a place</h2>
+      <form id="bucket-form" onsubmit="return validateBucket()" novalidate>
+        <label for="place">Place name</label>
+        <input type="text" id="place" name="place" placeholder="e.g. Bali, Indonesia">
+        <p class="error" id="place-error"></p>
+
+        <label for="season">Best season to go</label>
+        <select id="season" name="season">
+          <option value="">Choose a season...</option>
+          <option>Spring</option>
+          <option>Summer</option>
+          <option>Autumn</option>
+          <option>Winter</option>
+        </select>
+        <p class="error" id="season-error"></p>
+
+        <fieldset>
+          <legend>Priority</legend>
+          <label class="inline"><input type="radio" name="priority" value="High"> High</label>
+          <label class="inline"><input type="radio" name="priority" value="Medium" checked> Medium</label>
+          <label class="inline"><input type="radio" name="priority" value="Low"> Low</label>
+        </fieldset>
+
+        <label for="note">Notes (up to 200 characters)</label>
+        <textarea id="note" name="note" rows="3"></textarea>
+        <p class="error" id="note-error"></p>
+
+        <button type="submit" class="btn">Add to my list</button>
+        <p id="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <p class="footer-logo">Spin &amp; <span class="seek">Seek</span> 🌍</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="spin.html">Spin the Globe</a></li>
+        <li><a href="gems.html">Hidden Gems</a></li>
+        <li><a href="bucket.html">Bucket List</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <p class="footer-tagline">Spin the world. Discover the unexpected. 🧡</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
